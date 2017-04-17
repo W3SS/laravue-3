@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="chat-msg">
-      <p>{{message.message}}</p>
-      <small>{{message.user}}</small>
+      <p>{{ message.message }}</p>
+      <small>{{ message.user.name }}</small>
   </div>
 </template>
 
