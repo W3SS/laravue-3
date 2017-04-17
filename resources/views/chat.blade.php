@@ -14,7 +14,8 @@
     <body>
         <div id="app">
             <h1>聊天室</h1>
-            <example></example>
+            <chat-log :messages="messages"></chat-log>
+            <chat-composer v-on:messagesent="addMessage"></chat-composer>
         </div>
         <script src=js/app.js charset="utf-8"></script>
     </body>

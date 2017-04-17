@@ -1,0 +1,21 @@
+<template lang="html">
+  <div class="chat-msg">
+      <p>{{message.message}}</p>
+      <small>{{message.user}}</small>
+  </div>
+</template>
+
+<script>
+export default {
+    props:['message']
+}
+</script>
+
+<style lang="css">
+.chat-msg{
+    padding: 1rem;
+}
+.chat-msg > p {
+    margin-bottom: .5rem;
+}
+</style>

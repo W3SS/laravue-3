@@ -14,7 +14,28 @@ require('./bootstrap');
  */
 
 Vue.component('example', require('./components/Example.vue'));
+Vue.component('chat-msg', require('./components/ChatMsg.vue'));
+Vue.component('chat-log', require('./components/ChatLog.vue'));
+Vue.component('chat-composer', require('./components/ChatComposer.vue'));
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    data:{
+        messages:[
+            {
+                message:"安安",
+                user:"AJ"
+            },
+            {
+                message:"你也安安",
+                user:"AJ"
+            }
+        ]
+    },
+    methods:{
+        addMessage(message){
+            this.messages.push(message);
+            console.log('message added');
+        }
+    }
 });
